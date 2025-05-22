@@ -78,7 +78,7 @@ if (heroForm) {
       });
 
       if (response.ok) {
-        window.location.href = '/thank-you.html';
+        window.location.href = 'thank-you.html';
       } else {
         console.error('Ошибка при отправке:', await response.text());
       }
