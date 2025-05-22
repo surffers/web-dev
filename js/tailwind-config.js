@@ -2,12 +2,13 @@ tailwind.config={
     theme:{
         extend:{
             colors:{
-                primary:'#FF4D8D',
-                secondary:'#2A2A2A',
+                primary:'#0078FF',
+                secondary:'#1E1E1E',
                 dark: '#121212',
-                darkLight: '#1E1E1E',
+                darkLight: '#2A2A2A',
                 gray: '#333333',
-                lightGray: '#444444'
+                lightGray: '#444444',
+                'primary-dark': '#0066DD'
             },
             borderRadius:{
                 'none':'0px',
