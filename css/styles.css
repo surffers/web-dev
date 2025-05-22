@@ -747,4 +747,104 @@ header .logo img {
 
 .input-group:has(.input-error) {
     box-shadow: 0 0 0 2px rgba(0, 120, 255, 0.2);
+}
+
+#privacy-modal {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+#privacy-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#privacy-modal .bg-darkLight {
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+#privacy-modal.active .bg-darkLight {
+    transform: translateY(0);
+}
+
+#privacy-modal::-webkit-scrollbar {
+    width: 8px;
+}
+
+#privacy-modal::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+#privacy-modal::-webkit-scrollbar-thumb {
+    background: #0078FF;
+    border-radius: 4px;
+}
+
+#privacy-modal::-webkit-scrollbar-thumb:hover {
+    background: #0066DD;
+}
+
+/* Стилизация скроллбаров */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0078FF;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0066DD;
+}
+
+/* Стилизация скроллбаров для Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #0078FF rgba(0, 0, 0, 0.1);
+}
+
+/* Стилизация скроллбаров для модальных окон */
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #0078FF;
+    border-radius: 3px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #0066DD;
+}
+
+/* Стилизация скроллбаров для мобильных устройств */
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0, 120, 255, 0.7);
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 102, 221, 0.7);
+    }
 } 
