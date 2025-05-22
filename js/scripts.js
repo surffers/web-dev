@@ -57,31 +57,34 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.target === modal) hideModal();
     });
 
-    // Обработка формы
     const heroForm = document.getElementById('hero-form');
-    if (heroForm) {
-        heroForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const data = {
-                name: formData.get('name'),
-                phone: formData.get('phone')
-            };
+if (heroForm) {
+  heroForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(heroForm);
+    const data = {
+      name: formData.get('name'), // Проверьте, что `name` совпадает с атрибутом `name` в HTML!
+      phone: formData.get('phone')
+    };
 
-            try {
-                await fetch('https://surffers.surffers-com.workers.dev/', {
-                    method: 'POST',
-                    body: JSON.stringify({
-                        message: `Новая заявка!\n\nИмя: ${data.name}\nТелефон: ${data.phone}`
-                    })
-                });
-                
-                window.location.href = 'thank-you.html';
-            } catch (error) {
-                console.error('Ошибка:', error);
-                alert('Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже.');
-            }
-        });
+    try {
+      const response = await fetch('https://surffers.surffers-com.workers.dev', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json', // Важно указать заголовок!
+        },
+        body: JSON.stringify(data), // Отправляем как JSON
+      });
+
+      if (response.ok) {
+        window.location.href = '/thank-you.html';
+      } else {
+        console.error('Ошибка при отправке:', await response.text());
+      }
+    } catch (error) {
+      console.error('Ошибка:', error);
     }
+  });
+}
 }); 
