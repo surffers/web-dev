@@ -32,7 +32,43 @@ document.addEventListener('DOMContentLoaded', function() {
         setInterval(nextAdvantageSlide, 3000);
     }
 
- 
+    // Модальное окно политики конфиденциальности
+    const privacyModal = document.getElementById('privacy-modal');
+    const privacyLink = document.querySelector('a[href="#"]');
+    const closePrivacyModal = document.getElementById('close-privacy-modal');
+
+    function showPrivacyModal() {
+        privacyModal.classList.remove('hidden');
+        privacyModal.classList.add('flex');
+        setTimeout(() => privacyModal.classList.add('active'), 10);
+        document.body.style.overflow = 'hidden';
+    }
+
+    function hidePrivacyModal() {
+        privacyModal.classList.remove('active');
+        setTimeout(() => {
+            privacyModal.classList.remove('flex');
+            privacyModal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }, 300);
+    }
+
+    if (privacyLink) {
+        privacyLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            showPrivacyModal();
+        });
+    }
+
+    if (closePrivacyModal) {
+        closePrivacyModal.addEventListener('click', hidePrivacyModal);
+    }
+
+    if (privacyModal) {
+        privacyModal.addEventListener('click', (e) => {
+            if (e.target === privacyModal) hidePrivacyModal();
+        });
+    }
 
     // Обработка формы
     const heroForm = document.getElementById('hero-form');
