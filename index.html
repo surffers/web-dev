@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Разработка сайтов для бизнеса, которые увеличат ваши продажи минимум в 2 раза. Лендинги с админкой и интеграцией с Telegram.">
+    <meta name="keywords" content="разработка сайтов, лендинг, увеличение продаж, бизнес сайт, веб-разработка, создание сайтов, адаптивный дизайн, telegram интеграция">
+    <title>WebDev Pro - Разработка сайтов для бизнеса</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="min-h-screen bg-dark text-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transparent-header">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <div class="logo">
+                    <img src="/images/logo.jpg"  alt="AK-49" class="rounded-full">
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <div class="social-icons flex items-center gap-3 bg-darkLight/50 px-4 py-2 rounded-lg border border-primary/20">
+                        <a href="https://vk.com/xanderic" target="_blank" class="ri-vk-line text-2xl hover:text-primary transition-colors"></a>
+                        <a href="https://t.me/xanderic" target="_blank" class="ri-telegram-line text-2xl hover:text-primary transition-colors"></a>
+                        <a href="https://wa.me/79148558531" target="_blank" class="ri-whatsapp-line text-2xl hover:text-primary transition-colors"></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    
+    <!-- Hero Section -->
+    <section class="relative min-h-screen bg-gradient-to-b from-dark to-black overflow-hidden">
+        
+        <div class="instagram-header px-4 pt-4">
+            <div class="flex items-center justify-between bg-darkLight/50 px-4 py-3 w-full g-darkLight/50 px-4 py-2 rounded-lg border border-primary/20">
+                <div class="profile">
+                    <img src="/images/logo.jpg" alt="Profile" class="rounded-full w-7 h-7">
+                </div>
+                <div class="social-icons flex items-center gap-3">
+                    <a href="https://vk.com/xanderic" target="_blank" class="ri-vk-line text-2xl hover:text-primary transition-colors"></a>
+                    <a href="https://t.me/xanderic" target="_blank" class="ri-telegram-line text-2xl hover:text-primary transition-colors"></a>
+                    <a href="https://wa.me/79148558531" target="_blank" class="ri-whatsapp-line text-2xl hover:text-primary transition-colors"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 pt-10 md:pt-24 pb-40 md:pb-24 relative z-10 min-h-screen flex items-center justify-center">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="w-full md:w-1/2">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Разработка сайтов, которые <span class="text-primary">увеличат ваши продажи</span> минимум в 2 раза</h1>
+                    
+                    <div class="space-y-4 text-base md:text-lg mb-6 md:mb-8">
+                        <p class="text-gray-300 text-sm md:text-base">Создаем современные лендинги с админкой, где вы сможете легко редактировать контент, а заявки будут приходить прямо в Telegram.</p>
+                    </div>
+                    
+                    <div class="bg-darkLight p-2 md:p-4 rounded-lg shadow-lg mb-16 relative">
+                        <form id="hero-form" class="flex flex-col md:flex-row items-stretch md:items-center gap-3 h-auto md:h-[70px]">
+                            <div class="flex flex-col md:flex-row items-stretch md:items-center flex-1 bg-secondary rounded-lg md:rounded-l overflow-hidden input-group h-auto md:h-full">
+                                <div class="flex items-center flex-1 h-full">
+                                    <i class="ri-user-line text-primary/70 ml-3 mr-1 transition-colors duration-300"></i>
+                                    <input type="text" name="name" placeholder="Ваше имя" class="px-2 py-3 md:py-0 border-none w-full bg-transparent h-full" required>
+                                </div>
+                                <div class="h-px md:h-6 w-full md:w-px bg-primary/30 my-2 md:mx-2 self-center divider"></div>
+                                <div class="flex items-center flex-1 h-full">
+                                    <i class="ri-phone-line text-primary/70 ml-3 mr-1 transition-colors duration-300"></i>
+                                    <input type="tel" name="phone" placeholder="Ваш телефон" class="px-2 py-3 md:py-0 border-none w-full bg-transparent h-full" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="bg-primary text-white px-6 py-3 md:h-full rounded-lg md:rounded-r-lg whitespace-nowrap hover:bg-opacity-90 transition-all">Оставить заявку</button>
+                        </form>
+                        <div class="consent-block">
+                            <div class="flex items-start gap-3">
+                                <input type="checkbox" id="hero-consent" class="custom-checkbox" checked required>
+                                <label for="hero-consent" class="text-sm text-gray-400">Я согласен на обработку персональных данных и принимаю условия <a href="#" class="text-primary underline">политики конфиденциальности</a></label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4 md:gap-6 mt-10 advantages-mobile">
+                        <div class="advantages-slider">
+                            <div class="advantages-slide active">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                        <i class="ri-rocket-line ri-lg"></i>
+                                    </div>
+                                    <span class="text-sm md:text-base">Быстрый запуск</span>
+                                </div>
+                            </div>
+                            
+                            <div class="advantages-slide">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                        <i class="ri-smartphone-line ri-lg"></i>
+                                    </div>
+                                    <span class="text-sm md:text-base">Адаптивный дизайн</span>
+                                </div>
+                            </div>
+                            
+                            <div class="advantages-slide">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                        <i class="ri-line-chart-line ri-lg"></i>
+                                    </div>
+                                    <span class="text-sm md:text-base">Рост конверсии</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <div class="phone-frame hidden md:block">
+                        <div class="phone-screen">
+                            <div id="portfolio-slider" class="w-full h-full relative">
+                                <img src="/images/11.png" alt="Портфолио 1" class="slide active-slide object-cover object-top">
+                                <img src="/images/5.png" alt="Кухни" class="slide object-cover object-top">
+                                <img src="/images/7.png" alt="Лофт мебель" class="slide object-cover object-top">
+                                <img src="/images/8.png" alt="Строительная компания" class="slide object-cover object-top">
+                                <img src="/images/2.png" alt="Ворота" class="slide object-cover object-top">
+                                <img src="/images/9.png" alt="Автомобильные навесы" class="slide object-cover object-top">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+    <!-- Модальное окно благодарности -->
+    <div id="thank-you-modal" class="fixed inset-0 bg-black/80 z-50 hidden items-center justify-center">
+        <div class="bg-darkLight p-6 rounded-lg max-w-md w-full mx-4 relative">
+            <button id="close-modal" class="absolute top-4 right-4 text-white/60 hover:text-white transition-colors">
+                <i class="ri-close-line text-2xl"></i>
+            </button>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="ri-check-line text-3xl text-primary"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Спасибо за заявку!</h3>
+                <p class="text-white/70 mb-6">Мы свяжемся с вами в ближайшее время для обсуждения деталей.</p>
+                <button id="close-modal-btn" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-all">
+                    Закрыть
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script >
+        
+    </script>
+</body>
+</html>
